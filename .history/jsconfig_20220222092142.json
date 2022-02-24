@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        // "target": "ES5",
+        "baseUrl": ".",
+        "checkJs": false,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@i/*": [
+                "src/api/*"
+            ],
+            "@c/*": [
+                "src/components/*"
+            ],
+            "@a/*": [
+                "src/assets/*"
+            ],
+            "@s/*": [
+                "src/styles/*"
+            ],
+            "@u/*": [
+                "src/utils/*"
+            ],
+            "@v/*": [
+                "src/views/*"
+            ]
+        },
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
