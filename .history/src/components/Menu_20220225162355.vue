@@ -127,7 +127,7 @@ export default {
         this.$set(this.$data, 'tv', tv);
         this.$set(this.$data, 'box', box);
         this.$set(this.$data, 'router', router);
-        this.$set(this.$data, 'hardware', hardware);
+        this.$set(this.$data, 'box', box);
 
         // this.$data.navs = navs;
     },

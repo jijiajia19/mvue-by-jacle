@@ -57,45 +57,39 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div
-            class="header-menu"
-            @mouseenter="evtHeaderEnter()"
-            @mouseleave="evtHeaderLeave()"
-            v-show="headerStatus"
-            transition="fadein"
-        >
-            <ul class="menus clearfix">
-                <li
-                    class="product"
-                    v-for="item in currentPhones"
-                    :key="item.name"
-                >
-                    <a :href="item.sourcePath">
-                        <img :src="item.imgUrl" alt="" class="product-img" />
-                    </a>
-                    <div class="product-name">{{ item.name }}</div>
-                    <div class="product-price">
-                        {{ item.price }}
-                    </div>
-                </li>
-            </ul>
+            <div
+                class="header-menu"
+                @mouseenter="evtHeaderEnter()"
+                @mouseleave="evtHeaderLeave()"
+                v-show="headerStatus"
+                transition="fadein"
+            >
+                <ul class="menus clearfix">
+                    <li
+                        class="product"
+                        v-for="item in currentPhones"
+                        :key="item.name"
+                    >
+                        <a :href="item.sourcePath">
+                            <img
+                                :src="item.imgUrl"
+                                alt=""
+                                class="product-img"
+                            />
+                        </a>
+                        <div class="product-name">{{ item.name }}</div>
+                        <div class="product-price">
+                            {{ item.price }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import {
-    navs,
-    results,
-    phone,
-    red,
-    flats,
-    tv,
-    box,
-    router,
-    hardware,
-} from '@u/data';
+import { navs, results, phone } from '@u/data';
 import $ from 'jquery';
 //data的key一定要先定义
 export default {
@@ -103,14 +97,7 @@ export default {
         return {
             navs: [],
             results: [],
-            currentPhones: this.xiaomi,
-            xiaomi: [],
-            red: [],
-            flats: [],
-            tv: [],
-            box: [],
-            router: [],
-            hardware: [],
+            currentPhones: [],
             hotItems: ['红米pro', '小米笔记本air'],
             hotStatus: true,
             headerStatus: false,
@@ -121,14 +108,6 @@ export default {
         //有对象属性赋值
         this.$set(this.$data, 'navs', navs);
         this.$set(this.$data, 'results', results);
-        this.$set(this.$data, 'xiaomi', phone);
-        this.$set(this.$data, 'red', red);
-        this.$set(this.$data, 'flats', flats);
-        this.$set(this.$data, 'tv', tv);
-        this.$set(this.$data, 'box', box);
-        this.$set(this.$data, 'router', router);
-        this.$set(this.$data, 'hardware', hardware);
-
         // this.$data.navs = navs;
     },
     methods: {
@@ -144,8 +123,7 @@ export default {
         },
         evtHeaderEnter(menuType) {
             if (menuType) {
-                console.log(this.$data[menuType]);
-                this.currentPhones = this.$data[menuType];
+                this.currentPhones = this[menuType];
             }
             this.headerStatus = true;
             clearTimeout(this.tids);

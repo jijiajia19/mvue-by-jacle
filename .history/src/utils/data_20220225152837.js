@@ -260,4 +260,4 @@ var hardware = [
     },
 ];
 
-export { navs, results, phone, red, flats, tv, box, router, hardware };
+export { navs, results, phone, red, flats, tv, box, router, hardwa re};

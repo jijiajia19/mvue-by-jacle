@@ -58,59 +58,17 @@
                 </ul>
             </div>
         </div>
-        <div
-            class="header-menu"
-            @mouseenter="evtHeaderEnter()"
-            @mouseleave="evtHeaderLeave()"
-            v-show="headerStatus"
-            transition="fadein"
-        >
-            <ul class="menus clearfix">
-                <li
-                    class="product"
-                    v-for="item in currentPhones"
-                    :key="item.name"
-                >
-                    <a :href="item.sourcePath">
-                        <img :src="item.imgUrl" alt="" class="product-img" />
-                    </a>
-                    <div class="product-name">{{ item.name }}</div>
-                    <div class="product-price">
-                        {{ item.price }}
-                    </div>
-                </li>
-            </ul>
-        </div>
     </div>
 </template>
 
 <script>
-import {
-    navs,
-    results,
-    phone,
-    red,
-    flats,
-    tv,
-    box,
-    router,
-    hardware,
-} from '@u/data';
+import { navs } from '@u/data';
 import $ from 'jquery';
 //data的key一定要先定义
 export default {
     data() {
         return {
             navs: [],
-            results: [],
-            currentPhones: this.xiaomi,
-            xiaomi: [],
-            red: [],
-            flats: [],
-            tv: [],
-            box: [],
-            router: [],
-            hardware: [],
             hotItems: ['红米pro', '小米笔记本air'],
             hotStatus: true,
             headerStatus: false,
@@ -120,15 +78,6 @@ export default {
     created: function () {
         //有对象属性赋值
         this.$set(this.$data, 'navs', navs);
-        this.$set(this.$data, 'results', results);
-        this.$set(this.$data, 'xiaomi', phone);
-        this.$set(this.$data, 'red', red);
-        this.$set(this.$data, 'flats', flats);
-        this.$set(this.$data, 'tv', tv);
-        this.$set(this.$data, 'box', box);
-        this.$set(this.$data, 'router', router);
-        this.$set(this.$data, 'hardware', hardware);
-
         // this.$data.navs = navs;
     },
     methods: {
@@ -144,8 +93,7 @@ export default {
         },
         evtHeaderEnter(menuType) {
             if (menuType) {
-                console.log(this.$data[menuType]);
-                this.currentPhones = this.$data[menuType];
+                this.currentPhones = this[menuType];
             }
             this.headerStatus = true;
             clearTimeout(this.tids);
@@ -330,56 +278,6 @@ export default {
             float: right;
             font-size: 10px;
             color: #b0b0b0;
-        }
-    }
-}
-
-.header-menu {
-    position: absolute;
-    left: 0;
-    top: 140px;
-    width: 100%;
-    height: 230px;
-    background: #fff;
-    box-shadow: 0 1px 5px #ccc;
-    z-index: 11;
-    .menus {
-        list-style: none;
-        margin: 0;
-        padding: 30px 0 0 150px;
-        min-width: 1500px;
-        .product {
-            float: left;
-            a {
-                display: block;
-                padding: 0 30px;
-                border-right: 1px solid #ccc;
-            }
-            &:nth-last-child(1) {
-                a {
-                    border-right: 0;
-                }
-            }
-            .product-img {
-                width: 100%;
-                width: 160px;
-                height: 110px;
-            }
-            .product-name {
-                width: 100%;
-                height: 16px;
-                margin-top: 16px;
-                font-size: 12px;
-                text-align: center;
-            }
-            .product-price {
-                width: 100%;
-                height: 14px;
-                margin-top: 10px;
-                font-size: 10px;
-                text-align: center;
-                color: #ff6700;
-            }
         }
     }
 }

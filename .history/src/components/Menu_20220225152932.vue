@@ -103,14 +103,13 @@ export default {
         return {
             navs: [],
             results: [],
-            currentPhones: this.xiaomi,
-            xiaomi: [],
-            red: [],
-            flats: [],
-            tv: [],
-            box: [],
-            router: [],
-            hardware: [],
+            currentPhones: [],
+            red,
+            flats,
+            tv,
+            box,
+            router,
+            hardware,
             hotItems: ['红米pro', '小米笔记本air'],
             hotStatus: true,
             headerStatus: false,
@@ -121,14 +120,7 @@ export default {
         //有对象属性赋值
         this.$set(this.$data, 'navs', navs);
         this.$set(this.$data, 'results', results);
-        this.$set(this.$data, 'xiaomi', phone);
-        this.$set(this.$data, 'red', red);
-        this.$set(this.$data, 'flats', flats);
-        this.$set(this.$data, 'tv', tv);
-        this.$set(this.$data, 'box', box);
-        this.$set(this.$data, 'router', router);
-        this.$set(this.$data, 'hardware', hardware);
-
+        this.$set(this.$data, 'currentPhones', phone);
         // this.$data.navs = navs;
     },
     methods: {
@@ -144,8 +136,7 @@ export default {
         },
         evtHeaderEnter(menuType) {
             if (menuType) {
-                console.log(this.$data[menuType]);
-                this.currentPhones = this.$data[menuType];
+                this.currentPhones = this[menuType];
             }
             this.headerStatus = true;
             clearTimeout(this.tids);

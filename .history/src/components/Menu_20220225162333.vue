@@ -124,10 +124,8 @@ export default {
         this.$set(this.$data, 'xiaomi', phone);
         this.$set(this.$data, 'red', red);
         this.$set(this.$data, 'flats', flats);
-        this.$set(this.$data, 'tv', tv);
-        this.$set(this.$data, 'box', box);
-        this.$set(this.$data, 'router', router);
-        this.$set(this.$data, 'hardware', hardware);
+        this.$set(this.$data, 'xiaomi', phone);
+        this.$set(this.$data, 'xiaomi', phone);
 
         // this.$data.navs = navs;
     },

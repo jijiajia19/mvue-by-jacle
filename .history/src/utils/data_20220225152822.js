@@ -229,35 +229,41 @@ var router = [
 
 var hardware = [
     {
-        name: '九号平衡车',
-        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/scooter!160x110.jpg',
-        sourcePath: 'http://www.mi.com/scooter/',
-        price: '1999元',
+        name: '全新小米路由器',
+        imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/mitv3s-43!160x110.jpg',
+        sourcePath: 'http://www.mi.com/mitv3s/43/',
+        price: '699元起',
     },
     {
-        name: '小米净水器',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/water2!160x110.jpg',
-        sourcePath: 'http://www.mi.com/water/',
-        price: '1299元起',
+        name: '小米路由器 3',
+        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifi-3!160x110.jpg',
+        sourcePath: 'http://www.mi.com/miwifi3/',
+        price: '149元',
     },
     {
-        name: '米家压力IH电饭煲',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/dianfanbao!160x110.jpg',
-        sourcePath: 'http://www.mi.com/dianfanbao/',
-        price: '999元',
+        name: '小米路由器 mini',
+        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifimini!160x110.jpg',
+        sourcePath: 'http://www.mi.com/miwifimini/',
+        price: '119元',
     },
     {
-        name: '小米空气净化器 2',
-        imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/air2!160x110.jpg',
-        sourcePath: 'http://www.mi.com/air2/',
-        price: '649元',
+        name: '小米路由器 3C',
+        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/mitv3-60!160x110.jpg',
+        sourcePath: 'http://www.mi.com/mitv3/60/',
+        price: '99元',
     },
     {
-        name: '智能摄像机',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/doodle/zhinengyingjian!160x110.jpg',
-        sourcePath: 'http://list.mi.com/accessories/tag?id=shexiangji',
-        price: '149元起',
+        name: '小米路由器 青春版',
+        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/miwifilite!160x110.jpg',
+        sourcePath: 'http://www.mi.com/miwifilite/',
+        price: '69元',
+    },
+    {
+        name: '小米WiFi放大器',
+        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/wifiExtension!160x110.jpg',
+        sourcePath: 'http://item.mi.com/1153200003.html',
+        price: '35元',
     },
 ];
 
-export { navs, results, phone, red, flats, tv, box, router, hardware };
+export { navs, results, phone, red, flats, tv, box, router, hardwa };

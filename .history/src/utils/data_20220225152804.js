@@ -227,37 +227,4 @@ var router = [
     },
 ];
 
-var hardware = [
-    {
-        name: '九号平衡车',
-        imgUrl: 'http://c1.mifile.cn/f/i/15/goods/nav/scooter!160x110.jpg',
-        sourcePath: 'http://www.mi.com/scooter/',
-        price: '1999元',
-    },
-    {
-        name: '小米净水器',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/water2!160x110.jpg',
-        sourcePath: 'http://www.mi.com/water/',
-        price: '1299元起',
-    },
-    {
-        name: '米家压力IH电饭煲',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/2015/cn-index/dianfanbao!160x110.jpg',
-        sourcePath: 'http://www.mi.com/dianfanbao/',
-        price: '999元',
-    },
-    {
-        name: '小米空气净化器 2',
-        imgUrl: 'http://c1.mifile.cn/f/i/16/goods/nav/air2!160x110.jpg',
-        sourcePath: 'http://www.mi.com/air2/',
-        price: '649元',
-    },
-    {
-        name: '智能摄像机',
-        imgUrl: 'http://c1.mifile.cn/f/i/g/doodle/zhinengyingjian!160x110.jpg',
-        sourcePath: 'http://list.mi.com/accessories/tag?id=shexiangji',
-        price: '149元起',
-    },
-];
-
-export { navs, results, phone, red, flats, tv, box, router, hardware };
+export { navs, results, phone, red, flats, tv, box };
