@@ -9,14 +9,13 @@
 <script>
 import Header from '@c/Header.vue';
 import Menu from '@c/Menu.vue';
-import Category from '@c/Category';
 
 export default {
     name: 'Main',
     data() {
         return {};
     },
-    components: { Header, Menu, Category },
+    components: { Header, Menu },
 };
 </script>
 
