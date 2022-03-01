@@ -2,47 +2,21 @@
     <div class="container clearfix">
         <div class="category">
             <div class="top-side-left">
-                <ul class="side-left" @mouseleave="evtSideLeave">
+                <ul class="side-left">
                     <li
                         class="side-item"
                         v-for="item in sideItems"
                         :key="item.name"
-                        @mouseenter="evtSideEnter(item.type)"
                     >
                         {{ item.content }}
                     </li>
                 </ul>
             </div>
-            <div class="site-category-detail" v-show="goodsStatus">
+            <div>
                 <!-- 细节区域 -->
-                <ul
-                    class="category-items"
-                    v-for="goods in filterCurrGoods"
-                    :key="goods.id"
-                >
-                    <li
-                        class="category-goods"
-                        v-for="item in goods"
-                        :key="item.id"
-                    >
-                        <a class="goods-link" :href="item.sourceUrl">
-                            <img :src="item.imgUrl" alt="" />
-                            <div class="text-name">
-                                {{ item.name }}
-                            </div>
-                        </a>
-                        <a
-                            class="goods-buy-link"
-                            v-show="item.buyStatus"
-                            :href="item.buyUrl"
-                        >
-                            选购
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
-        <div class="slidebar clearfix"></div>
+        <div class="slidebar"></div>
     </div>
 </template>
 
@@ -51,7 +25,7 @@ import {
     banners,
     phones,
     computer,
-    box,
+    box2,
     router2,
     power,
     headset,
@@ -91,10 +65,9 @@ export default {
         };
     },
     created: function () {
-        this.$set(this.$data, 'banners', banners);
-        this.$set(this.$data, 'phones', phones);
-        this.$set(this.$data, 'computer', computer);
-        this.$set(this.$data, 'box', box);
+        this.$set(this.$data, 'banners', navs);
+        this.$set(this.$data, 'phones', results);
+        this.$set(this.$data, 'box', box2);
         this.$set(this.$data, 'router', router2);
         this.$set(this.$data, 'power', power);
         this.$set(this.$data, 'headset', headset);
@@ -103,26 +76,7 @@ export default {
         this.$set(this.$data, 'bags', bags);
         this.$set(this.$data, 'rabbit', rabbit);
     },
-    methods: {
-        evtSideEnter(currType) {
-            this.currGoods = this[currType];
-            this.goodsStatus = true;
-        },
-        evtSideLeave() {
-            this.goodsStatus = false;
-        },
-    },
     components: {},
-    computed: {
-        filterCurrGoods: function () {
-            let filterGoods = [[], [], [], [], []];
-            this.currGoods.forEach(function (item, index) {
-                let goodsIndex = Math.floor(index / 6);
-                filterGoods[goodsIndex].push(item);
-            });
-            return filterGoods;
-        },
-    },
 };
 </script>
 
@@ -220,10 +174,5 @@ export default {
             }
         }
     }
-}
-
-.slidebar {
-    // border: 1px solid red;
-    height: 460px;
 }
 </style>

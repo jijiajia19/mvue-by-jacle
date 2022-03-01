@@ -224,6 +224,6 @@ export default {
 
 .slidebar {
     // border: 1px solid red;
-    height: 460px;
+    height: 458px;
 }
 </style>

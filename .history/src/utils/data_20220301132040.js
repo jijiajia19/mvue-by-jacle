@@ -828,7 +828,7 @@ export {
     banners,
     phones,
     computer,
-    box2,
+    box,
     router2,
     power,
     headset,

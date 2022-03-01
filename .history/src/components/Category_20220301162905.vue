@@ -223,7 +223,6 @@ export default {
 }
 
 .slidebar {
-    // border: 1px solid red;
-    height: 460px;
+    border: 1px solid red;
 }
 </style>

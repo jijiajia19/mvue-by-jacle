@@ -3,7 +3,6 @@
         <Header></Header>
         <Menu></Menu>
         <Category></Category>
-        <HeaderTail></HeaderTail>
     </div>
 </template>
 
@@ -11,14 +10,14 @@
 import Header from '@c/Header.vue';
 import Menu from '@c/Menu.vue';
 import Category from '@c/Category';
-import HeaderTail from '@c/HeaderTail';
+import HeaderTail from '@/components/HeaderTail';
 
 export default {
     name: 'Main',
     data() {
         return {};
     },
-    components: { Header, Menu, Category, HeaderTail },
+    components: { Header, Menu, Category },
 };
 </script>
 

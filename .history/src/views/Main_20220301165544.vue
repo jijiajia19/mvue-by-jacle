@@ -3,7 +3,6 @@
         <Header></Header>
         <Menu></Menu>
         <Category></Category>
-        <HeaderTail></HeaderTail>
     </div>
 </template>
 
@@ -18,7 +17,7 @@ export default {
     data() {
         return {};
     },
-    components: { Header, Menu, Category, HeaderTail },
+    components: { Header, Menu, Category },
 };
 </script>
 

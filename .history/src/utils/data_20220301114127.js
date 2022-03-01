@@ -815,25 +815,4 @@ let rabbit = [
     },
 ];
 
-export {
-    navs,
-    results,
-    phone,
-    red,
-    flats,
-    tv,
-    box,
-    router,
-    hardware,
-    banners,
-    phones,
-    computer,
-    box2,
-    router2,
-    power,
-    headset,
-    foil,
-    line,
-    bags,
-    rabbit,
-};
+export { navs, results, phone, red, flats, tv, box, router, hardware };

@@ -2,12 +2,11 @@
     <div class="container clearfix">
         <div class="category">
             <div class="top-side-left">
-                <ul class="side-left" @mouseleave="evtSideLeave">
+                <ul class="side-left">
                     <li
                         class="side-item"
                         v-for="item in sideItems"
                         :key="item.name"
-                        @mouseenter="evtSideEnter(item.type)"
                     >
                         {{ item.content }}
                     </li>
@@ -20,11 +19,7 @@
                     v-for="goods in filterCurrGoods"
                     :key="goods.id"
                 >
-                    <li
-                        class="category-goods"
-                        v-for="item in goods"
-                        :key="item.id"
-                    >
+                    <li class="category-goods" v-for="item in goods">
                         <a class="goods-link" :href="item.sourceUrl">
                             <img :src="item.imgUrl" alt="" />
                             <div class="text-name">
@@ -42,7 +37,7 @@
                 </ul>
             </div>
         </div>
-        <div class="slidebar clearfix"></div>
+        <div class="slidebar"></div>
     </div>
 </template>
 
@@ -51,7 +46,7 @@ import {
     banners,
     phones,
     computer,
-    box,
+    box2,
     router2,
     power,
     headset,
@@ -91,10 +86,9 @@ export default {
         };
     },
     created: function () {
-        this.$set(this.$data, 'banners', banners);
-        this.$set(this.$data, 'phones', phones);
-        this.$set(this.$data, 'computer', computer);
-        this.$set(this.$data, 'box', box);
+        this.$set(this.$data, 'banners', navs);
+        this.$set(this.$data, 'phones', results);
+        this.$set(this.$data, 'box', box2);
         this.$set(this.$data, 'router', router2);
         this.$set(this.$data, 'power', power);
         this.$set(this.$data, 'headset', headset);
@@ -102,15 +96,6 @@ export default {
         this.$set(this.$data, 'line', line);
         this.$set(this.$data, 'bags', bags);
         this.$set(this.$data, 'rabbit', rabbit);
-    },
-    methods: {
-        evtSideEnter(currType) {
-            this.currGoods = this[currType];
-            this.goodsStatus = true;
-        },
-        evtSideLeave() {
-            this.goodsStatus = false;
-        },
     },
     components: {},
     computed: {
@@ -220,10 +205,5 @@ export default {
             }
         }
     }
-}
-
-.slidebar {
-    // border: 1px solid red;
-    height: 460px;
 }
 </style>

@@ -1,0 +1,33 @@
+<template>
+    <div class="container clearfix">
+        <div class="nine">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {};
+    },
+    components: {},
+};
+</script>
+
+<style scoped lang="less">
+.container {
+    position: relative;
+    width: 1226px;
+    height: auto;
+    margin: 14px 30px 26px;
+}
+.nine {
+    float: left;
+    width: 234px;
+    height: 170px;
+    background: #5f5750;
+}
+</style>

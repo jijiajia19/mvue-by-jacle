@@ -18,7 +18,7 @@ export default {
     data() {
         return {};
     },
-    components: { Header, Menu, Category, HeaderTail },
+    components: { Header, Menu, Category },
 };
 </script>
 

@@ -470,7 +470,7 @@ let box = [
         buyStatus: false,
     },
 ];
-let router2 = [
+let router = [
     {
         sourceUrl: '//www.mi.com/mivr1c/',
         imgUrl: 'http://c1.mifile.cn/f/i/15/goods/sidebar/vr8080.jpg?width=40&height=40',
@@ -815,25 +815,4 @@ let rabbit = [
     },
 ];
 
-export {
-    navs,
-    results,
-    phone,
-    red,
-    flats,
-    tv,
-    box,
-    router,
-    hardware,
-    banners,
-    phones,
-    computer,
-    box2,
-    router2,
-    power,
-    headset,
-    foil,
-    line,
-    bags,
-    rabbit,
-};
+export { navs, results, phone, red, flats, tv, box, router, hardware };

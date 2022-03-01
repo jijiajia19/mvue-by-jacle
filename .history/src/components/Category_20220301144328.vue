@@ -2,7 +2,7 @@
     <div class="container clearfix">
         <div class="category">
             <div class="top-side-left">
-                <ul class="side-left" @mouseleave="evtSideLeave">
+                <ul class="side-left">
                     <li
                         class="side-item"
                         v-for="item in sideItems"
@@ -42,7 +42,7 @@
                 </ul>
             </div>
         </div>
-        <div class="slidebar clearfix"></div>
+        <div class="slidebar"></div>
     </div>
 </template>
 
@@ -51,7 +51,7 @@ import {
     banners,
     phones,
     computer,
-    box,
+    box2,
     router2,
     power,
     headset,
@@ -92,9 +92,8 @@ export default {
     },
     created: function () {
         this.$set(this.$data, 'banners', banners);
-        this.$set(this.$data, 'phones', phones);
-        this.$set(this.$data, 'computer', computer);
-        this.$set(this.$data, 'box', box);
+        this.$set(this.$data, 'phones', results);
+        this.$set(this.$data, 'box', box2);
         this.$set(this.$data, 'router', router2);
         this.$set(this.$data, 'power', power);
         this.$set(this.$data, 'headset', headset);
@@ -220,10 +219,5 @@ export default {
             }
         }
     }
-}
-
-.slidebar {
-    // border: 1px solid red;
-    height: 460px;
 }
 </style>
