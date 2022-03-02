@@ -1,18 +1,26 @@
 <template>
-    <div class="container"></div>
+    <!-- 商品展示区域 -->
+    <div class="container">
+        <TopGoods></TopGoods>
+    </div>
 </template>
 
 <script>
+import TopGoods from '@/components/TopGoods';
+
 export default {
     data() {
         return {};
     },
-    components: {},
+    components: { TopGoods },
 };
 </script>
 
 <style scoped lang="less">
 .container {
-    background: green;
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+    padding-bottom: 40px;
 }
 </style>
