@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="goods-top clearfix">
-            <h3 class="top-title">搭配</h3>
+            <h3 class="top-title">{{ topTitle }}</h3>
             <ul class="top-sub">
                 <li
                     v-for="sub in subs"
@@ -104,42 +104,42 @@
 </template>
 
 <script>
-import { hotGoods, power, headset, battery } from '@u/hotdata';
+import { hot, protect, fiol, other } from '@u/threeData';
 
 export default {
     data() {
         return {
-            topTitle: '搭配',
-            topSubStatus: 'hotGoods',
-            hotGoods: [],
-            power: [],
-            headset: [],
-            battery: [],
+            topTitle: '配件',
             subs: [
-                { name: '热门', key: 'hotGoods' },
-                { name: '耳机音响', key: 'headset' },
-                { name: '电源', key: 'power' },
-                { name: '电池存储卡', key: 'battery' },
+                { name: '热门', key: 'hot' },
+                { name: '保护套', key: 'protect' },
+                { name: '贴膜', key: 'fiol' },
+                { name: '其它配件', key: 'other' },
             ],
+            topSubStatus: 'hotGoods',
+            hot: [],
+            protect: [],
+            fiol: [],
+            other: [],
             leftGoods: [
                 {
-                    sourceUrl: '//www.mi.com/dianyuan10000/',
-                    imgUrl: 'http://i3.mifile.cn/a4/54581b2c-f88d-4415-9754-af83116346bd',
+                    sourceUrl: '//list.mi.com/30',
+                    imgUrl: 'http://i3.mifile.cn/a4/aa163c95-2890-4227-967c-a05ccec6c4a9',
                 },
                 {
-                    sourceUrl: '//www.mi.com/capsuleearphone/',
-                    imgUrl: 'http://i3.mifile.cn/a4/f7da6234-7159-414a-a2ea-8832af89b4f1',
+                    sourceUrl: '//www.mi.com/powerstrip/',
+                    imgUrl: 'http://i3.mifile.cn/a4/363032e6-b043-4854-a8cc-8909df918f02',
                 },
             ],
             currGoods: [],
         };
     },
     created: function () {
-        this.$set(this.$data, 'hotGoods', hotGoods);
-        this.$set(this.$data, 'power', power);
-        this.$set(this.$data, 'headset', headset);
-        this.$set(this.$data, 'battery', battery);
-        this.currGoods = hotGoods;
+        this.$set(this.$data, 'hot', hot);
+        this.$set(this.$data, 'protect', protect);
+        this.$set(this.$data, 'fiol', fiol);
+        this.$set(this.$data, 'other', other);
+        this.currGoods = hot;
     },
     methods: {
         topSubEnter(key) {

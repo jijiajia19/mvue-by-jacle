@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="goods-top clearfix">
-            <h3 class="top-title">搭配</h3>
+            <h3 class="top-title">{{ topTitle }}</h3>
             <ul class="top-sub">
                 <li
                     v-for="sub in subs"
@@ -104,42 +104,45 @@
 </template>
 
 <script>
-import { hotGoods, power, headset, battery } from '@u/hotdata';
+import { hot, clothes, rabbit, around, bags } from '@u/fourdata';
 
 export default {
     data() {
         return {
-            topTitle: '搭配',
+            topTitle: '周边',
             topSubStatus: 'hotGoods',
-            hotGoods: [],
-            power: [],
-            headset: [],
-            battery: [],
+            hot: [],
+            clothes: [],
+            rabbit: [],
+            around: [],
+            bags: [],
             subs: [
-                { name: '热门', key: 'hotGoods' },
-                { name: '耳机音响', key: 'headset' },
-                { name: '电源', key: 'power' },
-                { name: '电池存储卡', key: 'battery' },
+                { name: '热门', key: 'hot' },
+                { name: '服装', key: 'clothes' },
+                { name: '米兔', key: 'rabbit' },
+                { name: '生活周边', key: 'around' },
+                { name: '箱包', key: 'bags' },
             ],
             leftGoods: [
                 {
-                    sourceUrl: '//www.mi.com/dianyuan10000/',
-                    imgUrl: 'http://i3.mifile.cn/a4/54581b2c-f88d-4415-9754-af83116346bd',
+                    sourceUrl: '//list.mi.com/22',
+                    imgUrl: 'http://i3.mifile.cn/a4/ff2a2f99-2c69-4472-acc1-e16322ee79ba',
                 },
                 {
-                    sourceUrl: '//www.mi.com/capsuleearphone/',
-                    imgUrl: 'http://i3.mifile.cn/a4/f7da6234-7159-414a-a2ea-8832af89b4f1',
+                    sourceUrl: '//list.mi.com/23',
+                    imgUrl: 'http://i3.mifile.cn/a4/c2b64ac9-0b29-4158-a4ab-66aca1720916',
                 },
             ],
             currGoods: [],
         };
     },
     created: function () {
-        this.$set(this.$data, 'hotGoods', hotGoods);
-        this.$set(this.$data, 'power', power);
-        this.$set(this.$data, 'headset', headset);
-        this.$set(this.$data, 'battery', battery);
-        this.currGoods = hotGoods;
+        this.$set(this.$data, 'hot', hot);
+        this.$set(this.$data, 'clothes', clothes);
+        this.$set(this.$data, 'rabbit', rabbit);
+        this.$set(this.$data, 'around', around);
+        this.$set(this.$data, 'bags', bags);
+        this.currGoods = hot;
     },
     methods: {
         topSubEnter(key) {

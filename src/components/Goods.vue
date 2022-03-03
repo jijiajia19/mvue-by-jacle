@@ -3,18 +3,22 @@
     <div class="container">
         <TopGoods></TopGoods>
         <SecondGoods></SecondGoods>
+        <Three></Three>
+        <Four></Four>
     </div>
 </template>
 
 <script>
 import TopGoods from '@/components/TopGoods';
 import SecondGoods from '@/components/SecondGoods';
+import Three from '@/components/Three';
+import Four from '@c/Four';
 
 export default {
     data() {
         return {};
     },
-    components: { TopGoods, SecondGoods },
+    components: { TopGoods, SecondGoods, Three, Four },
 };
 </script>
 
