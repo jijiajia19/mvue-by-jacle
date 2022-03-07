@@ -11,11 +11,4 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
-.container {
-    position: relative;
-    background: blue;
-    width: 1226px;
-    margin: 0 auto;
-}
-</style>
+<style scoped lang="less"></style>

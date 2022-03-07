@@ -5,6 +5,9 @@
         <SecondGoods></SecondGoods>
         <Three></Three>
         <Four></Four>
+        <recommend></recommend>
+        <HotProduct></HotProduct>
+        <Content></Content>
     </div>
 </template>
 
@@ -13,12 +16,24 @@ import TopGoods from '@/components/TopGoods';
 import SecondGoods from '@/components/SecondGoods';
 import Three from '@/components/Three';
 import Four from '@c/Four';
+import recommend from '@c/recommend';
+import HotProduct from '@/components/HotProduct';
+import Content from '@/components/Content';
 
 export default {
     data() {
         return {};
     },
-    components: { TopGoods, SecondGoods, Three, Four },
+    components: {
+        TopGoods,
+        SecondGoods,
+        Three,
+        Four,
+        recommend,
+        HotProduct,
+        Content,
+    },
+    methods: {},
 };
 </script>
 
