@@ -8,6 +8,7 @@
         <recommend></recommend>
         <HotProduct></HotProduct>
         <Content></Content>
+        <Video></Video>
     </div>
 </template>
 
@@ -19,6 +20,7 @@ import Four from '@c/Four';
 import recommend from '@c/recommend';
 import HotProduct from '@/components/HotProduct';
 import Content from '@/components/Content';
+import Video from '@/components/Video';
 
 export default {
     data() {
@@ -32,6 +34,7 @@ export default {
         recommend,
         HotProduct,
         Content,
+        Video,
     },
     methods: {},
 };

@@ -9,6 +9,7 @@
                 <li class="item"></li>
                 <li class="item"></li>
                 <li class="item"></li>
+                <li class="item"></li>
             </ul>
         </div>
     </div>
@@ -46,8 +47,15 @@ export default {
     width: 296px;
     height: 421px;
     border: 1px solid gray;
+    //浮动会脱离文本流
+    // display: inline;
+    // float: left;
+    //使用flex布局
 }
 
 .items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 </style>

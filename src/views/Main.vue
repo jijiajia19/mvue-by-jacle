@@ -5,6 +5,7 @@
         <Category></Category>
         <HeaderTail></HeaderTail>
         <Goods></Goods>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -14,13 +15,14 @@ import Menu from '@c/Menu.vue';
 import Category from '@c/Category';
 import HeaderTail from '@c/HeaderTail';
 import Goods from '@c/Goods.vue';
+import Footer from '@/components/Footer';
 
 export default {
     name: 'Main',
     data() {
         return {};
     },
-    components: { Header, Menu, Category, HeaderTail, Goods },
+    components: { Header, Menu, Category, HeaderTail, Goods, Footer },
 };
 </script>
 
