@@ -97,6 +97,7 @@ import {
     hardware,
 } from '@u/data';
 import $ from 'jquery';
+import _ from 'lodash';
 //data的key一定要先定义
 export default {
     data() {
@@ -130,6 +131,41 @@ export default {
         this.$set(this.$data, 'hardware', hardware);
 
         // this.$data.navs = navs;
+    },
+    created: function () {
+        //测试lodash相关
+        _.times(19, function (i) {
+            console.log(i);
+        });
+
+        //
+        var objA = {
+            name: '戈德斯文',
+        };
+        var objB = _.cloneDeep(objA);
+        console.log(objA, objB);
+        console.log(objA === objB);
+
+        //包含边界
+        var intran = _.random(0, 19);
+        console.log(intran);
+
+        var obj1 = { name: '戈德斯文', car: '宝马' };
+        var obj2 = { name: '柴硕', loveEat: true };
+
+        //合并，相同属性，后面的覆盖前面的key-value
+        console.log(_.assign(obj1, obj2));
+        console.log(_.includes(obj1, 'age'));
+        //json查询的是value
+        console.log(_.includes(Object.keys(obj1), '宝马'));
+
+        //传入的数值
+        _.forEach(['jacle', 'larry'], function (value, key) {
+            console.log(key, value);
+        });
+
+        var arr1 = [2, 1, 2];
+        console.log(_.uniq(arr1));
     },
     methods: {
         evtIptFocus() {
